@@ -1,0 +1,38 @@
+create database finance-analysis;
+
+CREATE TABLE `center_grid` (
+  `f1` varchar(255) DEFAULT NULL,
+  `f2` varchar(255) DEFAULT NULL,
+  `f3` varchar(255) DEFAULT NULL,
+  `f4` varchar(255) DEFAULT NULL,
+  `f5` varchar(255) DEFAULT NULL,
+  `f6` varchar(255) DEFAULT NULL,
+  `f7` varchar(255) DEFAULT NULL,
+  `f8` varchar(255) DEFAULT NULL,
+  `f9` varchar(255) DEFAULT NULL,
+  `f10` varchar(255) DEFAULT NULL,
+  `f11` varchar(255) DEFAULT NULL,
+  `f12` varchar(255) NOT NULL,
+  `f13` varchar(255) DEFAULT NULL,
+  `f14` varchar(255) DEFAULT NULL,
+  `f15` varchar(255) DEFAULT NULL,
+  `f16` varchar(255) DEFAULT NULL,
+  `f17` varchar(255) DEFAULT NULL,
+  `f18` varchar(255) DEFAULT NULL,
+  `f19` varchar(255) DEFAULT NULL,
+  `f20` varchar(255) DEFAULT NULL,
+  `f21` varchar(255) DEFAULT NULL,
+  `f22` varchar(255) DEFAULT NULL,
+  `f23` varchar(255) DEFAULT NULL,
+  `f24` varchar(255) DEFAULT NULL,
+  `f25` varchar(255) DEFAULT NULL,
+  `f62` varchar(255) DEFAULT NULL,
+  `f115` varchar(255) DEFAULT NULL,
+  `f128` varchar(255) DEFAULT NULL,
+  `f136` varchar(255) DEFAULT NULL,
+  `f152` varchar(255) DEFAULT NULL,
+  `create_date` datetime DEFAULT NULL,
+  `update_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`f12`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
