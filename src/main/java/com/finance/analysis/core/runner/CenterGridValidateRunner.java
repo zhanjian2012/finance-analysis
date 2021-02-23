@@ -22,7 +22,7 @@ import java.util.Objects;
  */
 @Slf4j
 @Component
-public class LoadPrizeInfoRunner implements CommandLineRunner {
+public class CenterGridValidateRunner implements CommandLineRunner {
 
     @Resource
     private CenterGridServiceImpl centerGridService;
