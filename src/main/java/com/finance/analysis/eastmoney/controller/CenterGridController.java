@@ -1,7 +1,7 @@
 package com.finance.analysis.eastmoney.controller;
 
 import com.finance.analysis.eastmoney.entity.CenterGrid;
-import com.finance.analysis.eastmoney.service.third.CenterGridService;
+import com.finance.analysis.eastmoney.service.third.CenterGridServiceImpl;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.github.xiaoymin.knife4j.annotations.ApiSort;
 import io.swagger.annotations.Api;
@@ -19,7 +19,7 @@ import java.util.List;
 public class CenterGridController {
 
     @Resource
-    private CenterGridService centerGridService;
+    private CenterGridServiceImpl centerGridService;
 
     @ApiOperationSupport(author = "吉安")
     @ApiOperation(value = "获取表格数据")

@@ -21,7 +21,7 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
-public class CenterGridServiceImpl extends ServiceImpl<CenterGridMapper, CenterGrid> implements CenterGridService {
+public class CenterGridServiceImpl extends ServiceImpl<CenterGridMapper, CenterGrid> {
 
     @Resource
     private CenterGridMapper gridMapper;
@@ -29,7 +29,6 @@ public class CenterGridServiceImpl extends ServiceImpl<CenterGridMapper, CenterG
     @Resource
     private RestTemplate restTemplate;
 
-    @Override
     public List<CenterGrid> getGridList() {
         String totalUrl = String.format(UrlConstant.EAST_MONEY_LIST_URL, 1);
         ResponseEntity<CenterGridResult> totalEntity = restTemplate.getForEntity(totalUrl, CenterGridResult.class);
@@ -52,12 +51,10 @@ public class CenterGridServiceImpl extends ServiceImpl<CenterGridMapper, CenterG
         return diff.subList(0, 10);
     }
 
-    @Override
     public List<CenterGrid> getBgqList() {
         return null;
     }
 
-    @Override
     public List<ND> getNdList() {
         return null;
     }
