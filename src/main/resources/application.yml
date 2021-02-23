@@ -1,0 +1,65 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/finance_analysis?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0
+
+
+knife4j:
+  enable: true
+  documents:
+  - group: 2.X版本
+    name: 另外文档分组请看这里
+    locations: classpath:markdown/*
+  - group: 3.默认接口
+    name: 我是另外一个分组的文档
+    locations: classpath:markdown/*
+  setting:
+    language: zh-CN
+    enableSwaggerModels: true
+    enableDocumentManage: true
+    swaggerModelName: 实体类列表
+    enableVersion: false
+    enableReloadCacheParameter: false
+    enableAfterScript: true
+    enableFilterMultipartApiMethodType: POST
+    enableFilterMultipartApis: false
+    enableRequestCache: true
+    enableHost: false
+    enableHostText: 192.168.0.193:8000
+    enableHomeCustom: true
+    homeCustomLocation: classpath:markdown/home.md
+    enableSearch: false
+    enableFooter: true
+    enableFooterCustom: true
+    footerCustomContent: Apache License 2.0 | Copyright  2019-[浙江八一菜刀股份有限公司](https://gitee.com/xiaoym/knife4j)
+    enableDynamicParameter: false
+    enableDebug: true
+    enableOpenApi: false
+    enableGroup: true
+  cors: false
+  production: false
+  basic:
+    enable: false
+    username: test
+    password: 12313
